@@ -1,5 +1,5 @@
 /*textbooks.c
- * Isaiah Hilkemann
+ * Isaiah Hilkemann, Michael Marotich, Ryan Mccabe
  *Week 3 lab Q3
  *9/13/24
  *evaluates the amount of textbooks someone bought
