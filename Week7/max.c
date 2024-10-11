@@ -1,4 +1,4 @@
-//Ryan McCabe
+//Ryan McCabe, Michael Marotich and Isiah Hilkemann
 //10/11/24
 //Code that finds the max when entering three integers 
 
