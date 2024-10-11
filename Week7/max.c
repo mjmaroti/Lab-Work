@@ -2,28 +2,36 @@
 //10/11/24
 //Code that finds the max when entering three integers 
 
-
 #include <stdio.h>
 
+int max(int a, int b, int c);
+
 int main() {
-    int Int1, Int2, Int3;
-    int maximum;
+    int num1, num2, num3, maximum;
 
-    // Read three integers
+    // Read three integers from user
     printf("Enter three integers: ");
-    scanf("%d %d %d", &Int1, &Int2, &Int3);
+    scanf("%d %d %d", &num1, &num2, &num3);
 
-    // Find the maximum
-    maximum = Int1; // Assume Int1 is the maximum
-    if (Int2 > maximum) {
-        maximum = Int2; // Update if Int2 is greater
-    }
-    if (Int3 > maximum) {
-        maximum = Int3; // Update if Int3 is greater
-    }
+    // Call the max function
+    maximum = max(num1, num2, num3);
 
-    // Print the result
-    printf("The maximum is: %d\n", maximum);
-    
+    // Print the maximum value
+    printf("The maximum value is: %d\n", maximum);
+
     return 0;
+}
+
+// Function definition (implementation)
+int max(int a, int b, int c) {
+    int maxVal = a; // Assume a is the maximum
+
+    if (b > maxVal) {
+        maxVal = b; // Update maxVal if b is greater
+    }
+    if (c > maxVal) {
+        maxVal = c; // Update maxVal if c is greater
+    }
+
+    return maxVal; // Return the maximum value
 }
