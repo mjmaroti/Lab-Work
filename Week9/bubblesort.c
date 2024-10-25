@@ -13,7 +13,7 @@ void bubbleSort(int array[], int size) {
             // Compare two adjacent elements
             if (array[i] > array[i + 1]) {
                 // Print the out of order elements before swapping
-                printf("Out of order: %d and %d\n", array[i], array[i + 1]);
+                printf("Out of order, swapped: %d and %d\n", array[i], array[i + 1]);
                 
                 int temp = array[i];
                 array[i] = array[i + 1];
