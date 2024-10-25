@@ -1,5 +1,6 @@
 // Names: Michael Marotich, Ryan McCabe, Isaiah Hilkemann
 // CS1111
+//ihilkema@mtu.edu, mjmaroti@mtu.edu, rsmccabe@mtu.edu
 // 10/25/2025
 //
 #include<stdio.h>
