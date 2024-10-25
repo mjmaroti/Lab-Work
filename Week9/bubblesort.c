@@ -1,4 +1,4 @@
-//Ryan McCabe, Michael Marotich, 
+//Ryan McCabe, Michael Marotich, Isaiah Hilkemann
 //10/25/24
 //rsmccabe@mtu.edu
 //A program that sorts out of order arrays
