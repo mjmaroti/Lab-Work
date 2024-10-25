@@ -20,23 +20,19 @@ void insertionSort(int arr[], int n)
                 }
                 // return value x back to normal if values were changed.
                 arr[x + 1] = key;
+                // Print the array
+                for (int i = 0; i < n; ++i)
+                {
+                        printf("%d, ", arr[i]);
+                }
+                printf("\n");
         }
-}
-//Function to print the array
-void printArray(int arr[], int n)
-{
-        for (int i = 0; i < n; ++i)
-        {
-                printf("%d, ", arr[i]);
-        }
-        printf("\n");
-}
+
 int main()
 {
         int arr[] = {7, 4, 2, 9};
         int n = sizeof(arr) / sizeof(arr[0]);
         // Variables are declared, call functions
         insertionSort(arr, n);
-        printArray(arr, n);
         return 0;
 }
