@@ -30,7 +30,7 @@ void insertionSort(int arr[], int n)
 
 int main()
 {
-        int arr[] = {7, 4, 2, 9};
+        int arr[] = {12, 99, 45, 181, 7};
         int n = sizeof(arr) / sizeof(arr[0]);
         // Variables are declared, call functions
         insertionSort(arr, n);
