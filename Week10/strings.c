@@ -49,25 +49,36 @@ int main() {
         return -1;
     }
 
-    char buffer[1024];
-
-    printf("Enter up to %d names:\n", size);
-    for (int i = 0; i < size; i++) {
-        if (fgets(buffer, sizeof(buffer), stdin) == NULL) {
-            break; // Stop if there is an error or EOF
-        }
-        buffer[strcspn(buffer, "\n")] = '\0'; // Remove the newline character
-
-        data[i] = malloc(strlen(buffer) + 1);
-        if (!data[i]) {
-            fprintf(stderr, "Failed to allocate memory for string!\n");
-            return -1;
-        }
-        strcpy(data[i], buffer); // Copy the string
+    FILE *file = fopen("numbers.txt", "r");
+    if (!file) {
+        fprintf(stderr, "Failed to open the file!\n");
+        free(data);
+        return -1;
     }
 
-    // Actual number of entered names (in case fewer than size were entered)
-    int nameCount = size; // You might want to adjust this if fewer names are processed
+    char buffer[1024];
+    int nameCount = 0;
+
+    // Read the first line to get the number of strings (although it's fixed at 10)
+    if (fgets(buffer, sizeof(buffer), file) != NULL) {
+        // You can process this line if needed; it just confirms the count.
+    }
+
+    // Read the names from the file
+    while (nameCount < size && fgets(buffer, sizeof(buffer), file) != NULL) {
+        buffer[strcspn(buffer, "\n")] = '\0'; // Remove the newline character
+
+        data[nameCount] = malloc(strlen(buffer) + 1);
+        if (!data[nameCount]) {
+            fprintf(stderr, "Failed to allocate memory for string!\n");
+            fclose(file);
+            return -1;
+        }
+        strncpy(data[nameCount], buffer, strlen(buffer) + 1); // Copy the string
+        nameCount++;
+    }
+
+    fclose(file); // Close the file
 
     bubbleSort(data, nameCount);
 
