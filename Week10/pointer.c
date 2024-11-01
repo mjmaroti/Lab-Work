@@ -1,7 +1,8 @@
 //Ryan McCabe, Michael Marotich, and Isaiah Hilkemann
-
+//CS111
 //11/1/2024
 //a code that uses pointers
+
 #include<malloc.h>
 #include<stdio.h>
 int main()
