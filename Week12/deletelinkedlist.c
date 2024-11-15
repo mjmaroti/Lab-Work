@@ -1,7 +1,7 @@
 /*
 * Implementation of deleteLinkedList
 *
-* Ryan, 
+* Ryan McCabe
 * rsmccabe@mtu.edu
 *
 * @date 11/15/2024
